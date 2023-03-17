@@ -55,5 +55,4 @@ int main()
    for (int i = 0; i < 4; i++){
      printf("\nProduto: %s\nPreco: %f\nEstoque: %d", nome[i],preco[i],qtd_estoque[i]);
    }
-
 }
