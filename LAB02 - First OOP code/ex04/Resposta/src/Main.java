@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String lixo;
+        String nome, pos, pais, Nome, nometec;
+        int na;
+        float peso, al;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Selecao 1: ");
+        System.out.println("escreva o nome da selecao: ");
+        Nome = s.nextLine();
+        System.out.println("escreva o nome do tecnico: ");
+        lixo = s.nextLine();
+        nometec = s.nextLine();
+        System.out.println("escreva o nome do jogador: ");
+        nome = s.nextLine();
+        System.out.println("escreva a data de nascimento: ");
+        na = s.nextInt();
+        System.out.println("escreva a altura do jogador: ");
+        al = s.nextFloat();
+        System.out.println("escreva o peso do jogador: ");
+        peso = s.nextFloat();
+        System.out.println("escreva a posiçao do jogador: ");
+        lixo = s.nextLine();
+        pos = s.nextLine();
+        System.out.println("escreva o país de nascimento do jogador: ");
+        pais = s.nextLine();
+        Selecao s1 = new Selecao(Nome, nometec, nome, na, al, peso, pos, pais);
+        System.out.println("Selecao 2: ");
+        System.out.println("escreva o nome da selecao: ");
+        Nome = s.nextLine();
+        System.out.println("escreva o nome do tecnico: ");
+        lixo = s.nextLine();
+        nometec = s.nextLine();
+        System.out.println("escreva o nome do jogador: ");
+        nome = s.nextLine();
+        System.out.println("escreva a data de nascimento: ");
+        na = s.nextInt();
+        System.out.println("escreva a altura do jogador: ");
+        al = s.nextFloat();
+        System.out.println("escreva o peso do jogador: ");
+        peso = s.nextFloat();
+        System.out.println("escreva a posiçao do jogador: ");
+        lixo = s.nextLine();
+        pos = s.nextLine();
+        System.out.println("escreva o país de nascimento do jogador: ");
+        pais = s.nextLine();
+        Selecao s2 = new Selecao(Nome, nometec, nome, na, al, peso, pos, pais);
+        s1.Show();
+        System.out.println("\n");
+        s2.Show();
+    }
+}
