@@ -10,6 +10,7 @@ public class Main {
         {
             a[i].Show();
         }
+        //a = NULL; -> adicionando essa linha (destruindo o objeto aluno) não altera nada na instanciação do objeto p
         Professor[] p = new Professor[3];
         p[0] = new Professor("jubscreudasso",34);
         p[1] = new Professor("jubscreudassasso",40);
@@ -21,24 +22,18 @@ public class Main {
 
         //agregação: aluno é parte de uma turma (um aluno participa de uma ou mais turmas)
         //enquanto aluno é independente (pode participar de mais turmas, e não é destruído quando uma turma se destrói), a turma depende de alunos para existir (ser instanciada)
+        //a = NULL; -> adicionando essa linha (destruindo o objeto aluno) impede que turma seja instanciada, pois seu construtor necessita dessa outra classe para funcionar
         Turma t = new Turma("turminha do balacobaco",3,a);
         t.Show();
         Turma t2 = new Turma("turminha do balacobaco DOIS",3,a);
         t2.Show();
         //composição: a cabeça é uma parte essencial de um aluno (cada aluno tem uma cabeça, a nao ser que ele perca na medida em que ele avança no curso, e a cabeça é parte importantíssima de aluno)
         //se remover o objeto todo (aluno), o objeto parte (cabeça), também deixa de existir
-        Cabeça c1 = new Cabeça(a[0]);
-        c1.apresentar();
-        Cabeça c2 = new Cabeça(a[1]);
-        c2.apresentar();
-        Cabeça c3 = new Cabeça(a[2]);
-        c3.apresentar();
+        //objetos da classe Cabeça são instanciadas dentro da classe Aluno;
+        //a = NULL; -> adicionando essa linha (destruindo o objeto aluno) impede a instanciação de objetos da classe Cabeça, e destruindo o objeto Cabeça dentro da classe Aluno impede a instanciação adequada dessa classe.
 
         //algumas açõeszinhas >:) :
         a[0].chorar_no_banho();
-        c1.delirar();
-        c1.fritar();
-        c1.delirar();
         p[0].preparar_aula();
         p[0].dar_aula(a[0]);
         p[0].preparar_aula();
@@ -49,10 +44,8 @@ public class Main {
         p[1].chorar_no_banho();
         p[1].dormir();
         a[1].dormir();
-        c2.sonhar();
         a[1].estudar();
         a[1].chorar_no_banho();
-        c2.sofrer();
 
         p[2].dar_aula(a[2]);
         p[2].dar_aula(a[2]);
@@ -62,13 +55,7 @@ public class Main {
         a[2].estudar();
         a[2].estudar();
         a[2].estudar();
-        c3.fritar();
         p[2].sofrer();
-        c3.fritar();
-        c3.fritar();
-        c3.fritar();
-        c3.fritar();
-        c3.fritar();
         a[2].chorar_no_banho();
         a[2].chorar_no_banho();
         a[2].chorar_no_banho();
@@ -76,11 +63,6 @@ public class Main {
         a[2].chorar_no_banho();
         a[2].chorar_no_banho();
         a[2].chorar_no_banho();
-        c3.sofrer();
-        c3.sofrer();
-        c3.sofrer();
-        c3.sofrer();
         a[2].dormir();
-        c3.sonhar();
     }
 }
