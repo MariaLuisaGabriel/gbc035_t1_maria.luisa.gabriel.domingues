@@ -41,7 +41,8 @@ Teste de chamada de herança
   "Classe C3: chamada do construtor com parametros"
 - Na classe C3 inclua um construtor que use o "super" para chamar o construtor da classe C2 com parâmetro
 - Em todas as classes, inclua um método que chama mostar_atributos, que mostra os valores de *todos* os atributos de um objeto (não utilizar *super*)
-    - Lembre que as classes herdam os atributos, inclusive os privados - e esses também devem ser mostrados 
+    - Lembre que as classes herdam os atributos, inclusive os privados - e esses também devem
+    ser mostrados
 - Em todas as classes, inclua um método que chama mostar_atributos_super, que mostra os valores de *todos* os atributos de um objeto e que utilize *super*
 
 # Ex05
