@@ -22,7 +22,7 @@ public class Main {
 
         //agregação: aluno é parte de uma turma (um aluno participa de uma ou mais turmas)
         //enquanto aluno é independente (pode participar de mais turmas, e não é destruído quando uma turma se destrói), a turma depende de alunos para existir (ser instanciada)
-        //a = NULL; -> adicionando essa linha (destruindo o objeto aluno) impede que turma seja instanciada, pois seu construtor necessita dessa outra classe para funcionar
+        //p = NULL; -> adicionando essa linha (destruindo o objeto aluno) impede que turma seja instanciada, pois seu construtor necessita dessa outra classe para funcionar
         Turma t = new Turma("turminha do balacobaco",3,a);
         t.Show();
         Turma t2 = new Turma("turminha do balacobaco DOIS",3,a);
@@ -30,7 +30,7 @@ public class Main {
         //composição: a cabeça é uma parte essencial de um aluno (cada aluno tem uma cabeça, a nao ser que ele perca na medida em que ele avança no curso, e a cabeça é parte importantíssima de aluno)
         //se remover o objeto todo (aluno), o objeto parte (cabeça), também deixa de existir
         //objetos da classe Cabeça são instanciadas dentro da classe Aluno;
-        //a = NULL; -> adicionando essa linha (destruindo o objeto aluno) impede a instanciação de objetos da classe Cabeça, e destruindo o objeto Cabeça dentro da classe Aluno impede a instanciação adequada dessa classe.
+        //p = NULL; -> adicionando essa linha (destruindo o objeto aluno) impede a instanciação de objetos da classe Cabeça, e destruindo o objeto Cabeça dentro da classe Aluno impede a instanciação adequada dessa classe.
 
         //algumas açõeszinhas >:) :
         a[0].chorar_no_banho();
