@@ -1,0 +1,4 @@
+1) throw serve para lançar na pilha de execução a instanciação da classe de exceção, enquanto o throws serve para avisar ao compilador java que aquele método específico terá, dentro dele, um throw.
+
+2) checked exceptions são exceções que ocorrem durante a compilação do programa java;
+unchecked exceptions são exceções que ocorrem durante a execução do programa java.
